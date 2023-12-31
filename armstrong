@@ -1,0 +1,29 @@
+
+#include <stdio.h>
+
+int main() {
+    int num,count=0,num2,num3,sum=0;
+    scanf("%d",num);
+    num3=num2=num;
+    while(num!=0){
+        num=num/10;
+        count++;
+    }
+    while(num2!=0){
+        int rem,product=1;
+        for(int i=0;i<count;i++){
+            rem=num2%10;
+            product=product*rem;
+        }
+    sum=sum+product;
+    num2=num2/10;
+    }
+    if(sum==num3){
+        printf("its is armstrong");
+    }
+    else{
+        printf("not armstrong");
+    }
+
+    return 0;
+}
